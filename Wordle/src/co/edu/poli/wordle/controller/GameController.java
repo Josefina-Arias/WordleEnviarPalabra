@@ -108,6 +108,66 @@ public class GameController {
     
     @FXML
     private TextField ingresarPalabra;
+	
+		private boolean isLightMode = true;
+
+	@FXML
+    private Button btnTheme;
+
+    @FXML
+    private Text txtWordle;
+    
+//    @FXML
+//	    void changeMode(ActionEvent event) {
+//		 
+//		double mode = 0;
+//
+//		 if(mode == 0) {
+//			 anchorPane.getStylesheets().remove("co/edu/poli/wordle/view/lightMode.css");
+//			 anchorPane.getStylesheets().add("co/edu/poli/wordle/view/darkMode.css");		 
+//			 mode = 0;
+//			 System.out.println("cambió a modo oscuro");
+//		 }else if (mode ==1) {
+//			 anchorPane.getStylesheets().remove("co/edu/poli/wordle/view/darkMode.css");
+//			 anchorPane.getStylesheets().add("co/edu/poli/wordle/view/lightMode.css");
+//			 mode = 1;
+//			 
+//			 System.out.println("cambió a modo claro");
+//		 }
+//	 } 
+
+
+	 @FXML
+	    void changeMode(ActionEvent event) {
+
+		 isLightMode = !isLightMode;
+		 if(isLightMode) {
+			 setLightMode();
+			 System.out.println("Change to LightMode");
+			 
+		 }else {
+			 setDarkMode();
+			 System.out.println("Change to DarkMode");
+		 }
+	    }
+
+	private void setLightMode() {
+		anchorPane.getStylesheets().remove("\\co\\edu\\poli\\wordle\\view\\darkMode.css");
+		System.out.println("remove darkMode1");
+		anchorPane.getStylesheets().add("\\co\\edu\\poli\\wordle\\view\\lightMode.css");
+		System.out.println("addLightMode1");
+
+	 
+	 
+	// Scene.getStylesheets().add( getClass().getResource( "ui/styles.css" ).toExternalForm() );
+ }
+ 
+ private void setDarkMode() {
+	 anchorPane.getStylesheets().remove("lightMode.css");
+	 System.out.println("remove lightMode2");
+	 anchorPane.getStylesheets().add("darkMode.css");
+	 System.out.println("add darkMode2");
+ }
     @FXML
     void agregarLetra(ActionEvent event) {
 
