@@ -1,1 +1,27 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.TextAreaNotifications .text {
+    -fx-font-weight: 800;
+    -fx-alignment:  center;
+    -fx-text-alignment: center;
+	-fx-text-fill:#FFFFFF;	
+	-fx-padding: 7px 0px;
+}
+.TextAreaNotifications .content {
+    -fx-background-color: black;
+    -fx-font-weight: 800;
+    -fx-alignment:  center;
+    -fx-text-alignment: center;
+    -fx-text-fill:#FFFFFF; 
+    	-fx-padding: 7px 0px;
+       
+}
+
+.TextAreaNotifications {
+    -fx-background-color: black;
+    -fx-font-weight: 800;
+    -fx-alignment:  center;
+    -fx-text-alignment: center;
+    -fx-text-fill:#FFFFFF;   
+    	-fx-padding: 7px 0px;
+       
+}

@@ -3,13 +3,22 @@ package co.edu.poli.wordle.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class PrincipalController {
 
 	private Stage stage;
+	
+    @FXML
+    private Button btnclose;
+    
+    @FXML
+    private Button btnGame;
+	
 
 	@FXML
 	void showGame(ActionEvent event) {
@@ -39,5 +48,15 @@ public class PrincipalController {
 	public void showGame() {
 		stage.show();
 	}
+
+	@FXML
+	 private void closeWindow(ActionEvent event) {
+	 
+	     Stage stage = (Stage) this.btnclose.getScene().getWindow();
+	     stage.close();
+	 }
+
+    
+  
 
 }

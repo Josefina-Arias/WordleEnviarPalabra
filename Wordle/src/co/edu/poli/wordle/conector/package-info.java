@@ -1,0 +1,1 @@
+package co.edu.poli.wordle.conector;
